@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Harry Caray augmented reality AR application. Become the beloved sportscaster by wearing his distinctive oversized glasses or wear a Harry face mask.">
+    <title>Holy Cow! - AR</title>
+
+    <link rel="stylesheet" href="./css/resets.css" type="text/css" />
+    <link rel="stylesheet" href="./css/animations.css" type="text/css" />
+    <link rel="stylesheet" href="./css/landing-page.css" type="text/css" />
+    <link rel="stylesheet" href="./css/tutorial.css" type="text/css" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+
+</head>
+<body>
+
+    <!-- 
+        ___________ OVERLAY CONTENT - START ___________ 
+    -->
+    
+        <!-- Tutorial content -->
+        <div id="tutorial-container" class="tutorial-container" style="display: none;">
+            <h2 id="tutorial-CTA"></h2>
+        
+            <!-- swipe icon -->
+            <svg id="tutorial-icon--swipe" class="swipe-animation--horizontal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490.651 490.651" xmlns:v="https://vecta.io/nano"><use xlink:href="#B"/>
+                <path d="M444.88 45.787L402.213 3.12c-4.16-4.16-10.923-4.16-15.083 0s-4.16 10.923 0 15.083l35.115 35.115-35.136 35.136c-4.16 4.16-4.16 10.923 0 15.083 2.091 2.069 4.821 3.115 7.552 3.115a10.71 10.71 0 0 0 7.552-3.115L444.88 60.87c4.16-4.161 4.16-10.923 0-15.083z"/>
+                <use xlink:href="#B" x="-277.333"/><path d="M47.077 53.317l35.115-35.115c4.16-4.16 4.16-10.923 0-15.083s-10.923-4.16-15.083 0L24.443 45.787c-4.16 4.16-4.16 10.923 0 15.083l42.667 42.667c2.091 2.069 4.821 3.115 7.552 3.115a10.56 10.56 0 0 0 7.531-3.136c4.16-4.16 4.16-10.923 0-15.083L47.077 53.317zm379.584 160c-8.768 0-16.939 2.667-23.723 7.211-5.845-16.597-21.696-28.544-40.277-28.544-8.768 0-16.939 2.667-23.723 7.211-5.845-16.597-21.696-28.544-40.277-28.544a42.32 42.32 0 0 0-21.333 5.739v-69.739c0-23.531-19.136-42.667-42.667-42.667s-42.667 19.136-42.667 42.667v181.333l-37.077-27.797c-21.973-16.491-53.248-14.293-72.725 5.163-12.48 12.48-12.48 32.768 0 45.248l151.915 151.936c18.133 18.133 42.261 28.117 67.904 28.117h49.984c64.683 0 117.333-52.629 117.333-117.333V255.984c0-23.531-19.136-42.667-42.667-42.667zm21.334 160c0 52.928-43.072 96-96 96h-49.984c-19.968 0-38.72-7.765-52.821-21.867L97.275 295.515c-4.16-4.16-4.16-10.923 0-15.083 6.613-6.592 15.445-9.984 24.32-9.984 7.211 0 14.464 2.24 20.544 6.805l54.123 40.597c3.243 2.432 7.595 2.795 11.179 1.003 3.605-1.813 5.888-5.504 5.888-9.536V106.651c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v160c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-53.333c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v53.333c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-32c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v32c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-10.667c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v117.333z"/>
+                <defs>
+                <path id="B" d="M437.328 42.651h-128c-5.888 0-10.667 4.779-10.667 10.667s4.779 10.667 10.667 10.667h128c5.888 0 10.667-4.779 10.667-10.667s-4.779-10.667-10.667-10.667z"/>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- Face Tracking Tutorial -->
+        <div id="tutorial-container--face-tracking" class="tutorial-container--face-tracking" style="display: none;">
+            <h2>Position your face in the center</h2>
+
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg class="tutorial--face-icon" enable-background="new 0 0 500 500" version="1.1" viewBox="0 0 500 500" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                <path d="m297.7 238c0 33.5-21.3 84.7-47.7 84.7s-47.7-51.2-47.7-84.7 21.3-60.7 47.7-60.7 47.7 27.2 47.7 60.7z"/>
+                <polyline points="297.7 143 315 143 315 162.3"/>
+                <polyline points="202.3 143 185 143 185 162.3"/>
+                <polyline class="st2" points="315,337 315,354.3 295.7,354.3"/>
+                <polyline class="st2" points="185,337 185,354.3 204.3,354.3"/>
+            </svg>    
+            
+            <h2>Works best in a well-lit environment</h2>
+
+        </div>
+
+
+        <!-- Secondary Loading animation -->
+        <div class="secondary-loading-screen" id="secondary-loading-screen" style="display: none;">
+            <div id="loading-animation" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
+
+
+
+        <!-- screenshot flash -->
+        <div id="screenshot-flash" class="screenshot-flash" style="display: none;"></div>
+
+    <!-- 
+        ___________ OVERLAY CONTENT - END ___________ 
+    -->
+
+
+
+
+    <!-- 
+        ___________ MAIN CONTENT - START ___________ 
+    -->
+
+        <!-- Landing page content -->
+        <div id="landing-screen" class="landing-screen--container">
+            <div class="landing-screen--top">
+                <img width="250" height="150" src="assets/landing-page/HCRG_watermark.png" alt="Harry Caray's Restaurant Group Logo">
+            </div>
+            <div class="landing-screen--middle">
+                <img width="400" height="200" src="assets/landing-page/app_logo.png" alt="Harry Caray's Holy Cow Augmented Reality App Logo">
+                <button id="launch-button">LAUNCH</button>
+                <!-- Loading animation -->
+                <div id="loading-animation--landing" class="lds-ellipsis" style="display: none;"><div></div><div></div><div></div><div></div></div>
+            </div>
+            <div class="landing-screen--bottom">
+                <a href="https://www.m1interactive.com/" target="_blank" rel="noopener noreferrer">
+                    <img width="300" height="50" src="assets/landing-page/M1_watermark.png" alt="M1 Interactive Logo">
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- banner image Slider - main container -->
+        <div class="swiper swiper-hint" style="display: none;">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img class="sticker-image" src="./assets/banners/heres_to_harry.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="sticker-image" src="./assets/banners/beautiful_day.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="sticker-image" src="./assets/banners/birthday.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="sticker-image" src="./assets/banners/go_cubs.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="sticker-image" src="./assets/banners/holy_cow.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="sticker-image" src="./assets/banners/it_could_be.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="sticker-image" src="./assets/banners/ribs.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="sticker-image" src="./assets/banners/take_me_out.png">
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide--empty"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- face filter canvas -->
+        <canvas id="deepar-canvas"></canvas>
+
+
+
+        <!-- Content that will be saved as one flat image -->
+        <div id="screenshot-container">
+            <!-- deepAR canvas screenshot image without banner image -->
+            <img class="deep-canvas-image" id="deepCanvasImage" src="">
+
+            <!-- active banner image -->
+            <img class="active-banner-image" id="active-banner-image" src="">
+        </div>
+
+
+
+        <!-- Manual screenshot save fallback -->
+        <div id="save-fallback--container" style="display: none;">
+            <div class="exit-screenshot--container">
+                <button id="exit-save-fallback--button">
+                    <svg viewBox="0 0 329.26933 329">
+                    <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
+                    </svg>
+                </button>
+            </div>
+
+            <img id="save-fallback--photo" src="" >
+            <h1>Tap and hold on your photo to save!</h1>
+        </div>
+
+    <!-- 
+        ___________ MAIN CONTENT - END ___________
+    -->
+
+
+
+
+    <!-- 
+        ___________ UI BUTTONS - START ___________ 
+    -->
+
+        <!-- Exit screenshot preview button -->
+        <div id="exit-screenshot--container" class="exit-screenshot--container" style="display: none;">
+            <button id="exit-screenshot-button">
+                <svg viewBox="0 0 329.26933 329">
+                <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Button UI container -->
+        <div class="screenshot-button--container" style="display: flex">
+    
+            <!-- Apply filter button: 2D face -->
+            <button id="updatedFaceFilter--face">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m256 386.003906c63.671875 0 99.015625-46.058594 110.445312-76.535156 3.671876-9.792969-3.578124-20.269531-14.046874-20.269531h-192.796876c-10.460937 0-17.722656 10.464843-14.046874 20.269531 11.371093 30.316406 46.582031 76.535156 110.445312 76.535156zm71.511719-66.804687c-16.28125 22.640625-42.859375 36.804687-71.511719 36.804687s-55.230469-14.164062-71.511719-36.804687zm0 0"/>
+                    <path d="m180.0625 136.890625c2.75 3.398437 6.957031 5.574219 11.671875 5.574219 8.28125 0 15-6.71875 15-15 0-3.511719-1.230469-6.910156-3.480469-9.605469-12.824218-15.386719-31.664062-24.207031-51.6875-24.207031-20.023437 0-38.863281 8.820312-51.6875 24.207031-2.25 2.695313-3.480468 6.09375-3.480468 9.605469v.003906c0 8.28125 6.714843 14.996094 15 14.996094 4.683593 0 8.863281-2.144532 11.613281-5.507813 7.105469-8.457031 17.503906-13.304687 28.554687-13.304687 11.019532 0 21.394532 4.820312 28.496094 13.238281zm0 0"/>
+                    <path d="m388.929688 136.890625c2.75 3.398437 6.957031 5.574219 11.671874 5.574219 8.28125 0 15-6.71875 15-15 0-3.511719-1.230468-6.910156-3.480468-9.605469-12.824219-15.382813-31.664063-24.207031-51.6875-24.207031-20.023438 0-38.863282 8.820312-51.6875 24.207031-2.25 2.695313-3.480469 6.09375-3.480469 9.605469v.003906c0 8.28125 6.714844 14.996094 15 14.996094 4.679687 0 8.863281-2.144532 11.613281-5.503906 7.105469-8.460938 17.503906-13.308594 28.554688-13.308594 11.019531 0 21.390625 4.820312 28.496094 13.238281zm0 0"/>
+                    <path d="m85.972656 44.484375c18.171875-9.085937 38.359375-12.121094 58.398438-8.78125l60.964844 10.160156c8.171874 1.363281 15.898437-4.160156 17.261718-12.328125 1.363282-8.171875-4.160156-15.902344-12.328125-17.265625l-60.96875-10.160156c-26.332031-4.386719-52.867187-.394531-76.742187 11.539063-7.410156 3.707031-10.414063 12.714843-6.707032 20.125 3.714844 7.433593 12.734376 10.402343 20.121094 6.710937zm0 0"/>
+                    <path d="m306.6875 45.863281 60.964844-10.160156c20.035156-3.339844 40.226562-.304687 58.394531 8.78125 7.386719 3.691406 16.40625.722656 20.125-6.710937 3.703125-7.410157.699219-16.417969-6.710937-20.125-23.875-11.9375-50.410157-15.925782-76.742188-11.539063l-60.964844 10.160156c-8.171875 1.363281-13.691406 9.09375-12.328125 17.265625 1.359375 8.167969 9.089844 13.691406 17.261719 12.328125zm0 0"/>
+                    <path d="m497 0c-8.285156 0-15 6.714844-15 15v189.375c0 55.007812-20.445312 114.058594-66.195312 159.804688l-88.132813 88.136718c-19.144531 19.140625-44.59375 29.683594-71.679687 29.683594-27.070313 0-52.519532-10.542969-71.664063-29.6875l-88.132813-88.132812c-45.734374-45.734376-66.195312-104.777344-66.195312-159.804688v-189.375c0-8.285156-6.714844-15-15-15s-15 6.714844-15 15v189.375c0 62.382812 23.203125 129.238281 74.980469 181.019531l88.132812 88.132813c24.808594 24.808594 57.792969 38.472656 92.894531 38.472656 35.085938 0 68.070313-13.664062 92.875-38.472656l88.136719-88.132813c51.808594-51.8125 74.980469-118.691406 74.980469-181.019531v-189.375c0-8.285156-6.714844-15-15-15zm0 0"/>
+                </svg>
+            </button>
+    
+            <!-- Take screenshot button -->
+            <button id="screenshot-button" class="screenshot-button">        
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420.8 420.8">
+                    <path d="M406.8 96.4c-8.4-8.8-20-14-33.2-14h-66.4v-0.8c0-10-4-19.6-10.8-26 -6.8-6.8-16-10.8-26-10.8h-120c-10.4 0-19.6 4-26.4 10.8 -6.8 6.8-10.8 16-10.8 26v0.8h-66c-13.2 0-24.8 5.2-33.2 14 -8.4 8.4-14 20.4-14 33.2v199.2C0 342 5.2 353.6 14 362c8.4 8.4 20.4 14 33.2 14h326.4c13.2 0 24.8-5.2 33.2-14 8.4-8.4 14-20.4 14-33.2V129.6C420.8 116.4 415.6 104.8 406.8 96.4zM400 328.8h-0.4c0 7.2-2.8 13.6-7.6 18.4s-11.2 7.6-18.4 7.6H47.2c-7.2 0-13.6-2.8-18.4-7.6 -4.8-4.8-7.6-11.2-7.6-18.4V129.6c0-7.2 2.8-13.6 7.6-18.4s11.2-7.6 18.4-7.6h77.2c6 0 10.8-4.8 10.8-10.8V81.2c0-4.4 1.6-8.4 4.4-11.2s6.8-4.4 11.2-4.4h119.6c4.4 0 8.4 1.6 11.2 4.4 2.8 2.8 4.4 6.8 4.4 11.2v11.6c0 6 4.8 10.8 10.8 10.8H374c7.2 0 13.6 2.8 18.4 7.6s7.6 11.2 7.6 18.4V328.8z"/>
+                    <path d="M210.4 130.8c-27.2 0-52 11.2-69.6 28.8 -18 18-28.8 42.4-28.8 69.6s11.2 52 28.8 69.6c18 18 42.4 28.8 69.6 28.8s52-11.2 69.6-28.8c18-18 28.8-42.4 28.8-69.6s-11.2-52-28.8-69.6C262.4 142 237.6 130.8 210.4 130.8zM264.8 284c-14 13.6-33.2 22.4-54.4 22.4S170 297.6 156 284c-14-14-22.4-33.2-22.4-54.4 0-21.2 8.8-40.4 22.4-54.4 14-14 33.2-22.4 54.4-22.4s40.4 8.8 54.4 22.4c14 14 22.4 33.2 22.4 54.4C287.6 250.8 278.8 270 264.8 284z"/>
+                    <circle cx="352.8" cy="150" r="19.6"/>
+                </svg>
+            </button>
+    
+            <!-- Share screenshot button -->
+            <button class="share-button" id="share-button" style="display: none">Share</button>
+    
+            <!-- Apply filter button: 3D glasses -->
+            <button id="updatedFaceFilter--glasses">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="m512 218.032h-32.767c-13.741-33.133-46.426-56.5-84.47-56.5h-29.856c-71.368-20.946-146.451-20.946-217.817 0h-29.855c-38.044 0-70.729 23.367-84.47 56.5h-32.765v30h25.967c-.086 1.624-.132 26.743-.132 26.743 0 50.399 41.003 91.402 91.401 91.402 63.744 0 116.271-48.913 122.041-111.175 1.243-8.021 8.394-14.044 16.742-14.044 8.155 0 15.248 5.837 16.668 13.629 5.574 62.46 58.192 111.59 122.077 111.59 50.398 0 91.401-41.003 91.401-91.402 0 0-.046-25.12-.132-26.743h25.967zm-394.764 118.146c-33.856 0-61.401-27.545-61.401-61.402v-21.841c0-33.857 27.545-61.402 61.401-61.402h40.506c28.711 0 52.069 23.358 52.069 52.07.001 51.045-41.529 92.575-92.575 92.575zm138.782-125.22c-7.5 0-14.652 1.795-21.016 4.98-5.272-14.68-14.621-27.423-26.668-36.886 31.658-4.292 63.674-4.292 95.333 0-12.017 9.439-21.35 22.141-26.63 36.774-6.339-3.122-13.479-4.868-21.019-4.868zm200.147 63.817c0 33.857-27.545 61.402-61.401 61.402-51.046 0-92.575-41.529-92.575-92.575 0-28.712 23.358-52.07 52.069-52.07h40.506c33.856 0 61.401 27.545 61.401 61.402z"/>
+                    </g>
+                </svg>
+            </button>
+        </div>
+
+    <!-- 
+        ___________ UI/BUTTONS - END ___________ 
+    -->
+
+
+
+    <!-- INCLUDE HTML2CANVAS -->
+    <script src="./lib/html2canvas/html2canvas.min.js"></script>
+
+    <!-- INCLUDE SWIPERJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- INCLUDE DEEPAR -->
+    <script type="text/javascript" src="lib/deepar.js"></script>
+    
+    <script type="text/javascript" src="./js/bannerSlider.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

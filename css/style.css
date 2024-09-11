@@ -1,0 +1,266 @@
+body {
+    width: 100vw;
+
+    /* --vh is set in main.js */
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+#deepar-canvas {
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 12;
+} 
+
+.secondary-loading-screen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 25;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(17,17,17,0.75);
+}
+
+
+.swiper {
+    z-index: 20 !important;
+    height: 100%;
+}
+
+.swiper-slide--empty {
+    width: 100%;
+    height: 100%;
+}
+
+/* displays active banner image on screenshot */
+.active-banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 13;
+}
+
+/* displays deepAR canvas on screenshot */
+.deep-canvas-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+}
+
+.screenshot-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 12;
+    width: 100%;
+    height: 100%;
+}
+
+.screenshot-button--container {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 21;
+    padding-bottom: 0.90rem;
+    background: rgb(17,17,17);
+    background: linear-gradient(0deg, rgba(17,17,17,0.5) 0%, rgba(17,17,17,0) 100%);
+}
+
+#screenshot-container {
+    height: 100%;
+    width: 100vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 13;
+}
+
+.share-button {
+    border-radius: 10px;
+    background: none;
+    border: 4px solid #fff;
+    width: 5em;
+    height: 2.5em;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.screenshot-button, .download-button {
+    border-radius: 50%;
+    background: none;
+    border: 4px solid #fff;
+    width: 5em;
+    height: 5em;
+}
+
+.screenshot-button svg {
+    stroke: #fff;
+    fill: #fff;
+    stroke-width: 1.35rem;
+    width: 1.35em;
+    height: 1.35em;
+    font-size: 1.5em;
+}
+
+.download-button svg {
+    stroke: #fff;
+    fill: #fff;
+    width: 1.35em;
+    height: 1.35em;
+    font-size: 1.5em;
+}
+
+#updatedFaceFilter--face svg {
+    stroke: #fff;
+    fill: #fff;
+    stroke-width: 1.35rem;
+    width: 1.30em;
+    height: 1.30em;
+    font-size: 1.5em;
+}
+
+#updatedFaceFilter--glasses svg {
+    stroke: #fff;
+    fill: #fff;
+    width: 1.35em;
+    height: 1.35em;
+    font-size: 2.25em;
+}
+
+#sticker-menu--button {
+    background: none;
+    outline: none;
+    border: none;
+    margin-right: 1rem;
+}
+
+#sticker-menu--button svg {
+    width: 3rem;
+    stroke: #fff;
+    fill: #fff;
+    stroke-width: 1.75rem;
+}
+
+#updatedFaceFilter--glasses, #updatedFaceFilter--face {
+    background: rgba(0, 0, 0, 0.0);
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.exit-screenshot--container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    z-index: 13;
+    padding: 1rem;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 35%, rgba(255,255,255,0) 100%);
+}
+
+.exit-screenshot--container button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.exit-screenshot--container button svg {
+    stroke: #fff;
+    fill: #fff;
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+}
+
+.screenshot-flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 16;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.frame-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 11;
+    width: 100vw;
+    height: 100%;
+    box-shadow: 0px 0px 10px #0E3386;
+}
+
+#save-fallback--container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 16;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 0px 2px 4px #333;
+    font-size: 0.75rem;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.98);
+}
+
+#save-fallback--photo {
+    max-width: fit-content;
+    max-height: calc(88% - 12vmin);
+    border-radius: 10px;
+    border: 1vmin solid white;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#save-fallback--container button {
+    background: none;
+    outline: none;
+    border: none;
+    float: left;
+}
+
+#save-fallback--container button svg {
+    stroke: #fff;
+    fill: #fff;
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+}
