@@ -133,7 +133,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
         });
 
         // download the face tracking model
-        deepAR.downloadFaceTrackingModel('../models/models-68-extreme.bin');
+        deepAR.downloadFaceTrackingModel('./models/models-68-extreme.bin');
 
         deepAR.onCameraPermissionDenied = function() {
             alert('Harry Caray AR needs permission to access your camera in order to work - please update your privacy settings')
