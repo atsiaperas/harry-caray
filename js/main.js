@@ -31,7 +31,8 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
     function startDeepAR() {
         // Initialize the DeepAR object
         deepAR = DeepAR({
-            licenseKey: 'a35105758a4e60b7a3c8e044bc680fb7ffd74585b999a01c87f7b753d05b371c63ec7ee3e50461d4',
+            // licenseKey: 'a35105758a4e60b7a3c8e044bc680fb7ffd74585b999a01c87f7b753d05b371c63ec7ee3e50461d4',
+            licenseKey: '9c86073daa370b84c869a99eb3f1c09c68522d20d9bc35fdb5145bc8fcc3dee3189655b721b81720',
             canvasWidth: canvasWidth, 
             canvasHeight: canvasHeight,
             canvas: document.getElementById('deepar-canvas'),
